@@ -162,6 +162,12 @@ main() {
 
         importFunction "wazuh.sh"
         importFunction "filebeat.sh"
+        
+        if [ -n "$wazuhclusterkey" ]; then
+            progressbartotal=14
+        else
+            progressbartotal=12
+        fi
 
         if [ -n "${ignore}" ]; then
             logger -w "Health-check ignored."

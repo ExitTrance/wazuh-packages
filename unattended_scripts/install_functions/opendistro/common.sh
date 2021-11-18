@@ -297,7 +297,7 @@ progressBar() {
         printf "\n"
     fi
 
-    if [ -z "${progressbartotal}"]; then
+    if [ -z "${progressbartotal}" ]; then
         progressbartotal=20
     fi
 
@@ -321,9 +321,6 @@ progressBar() {
     progress=$(( $progress+1 ))
 
     lines=$(echo -e "$buffer" | wc -l)
-    if [ -n "$1" ]; then
-        lines=$(( $lines+1 ))
-    fi
 }
 
 ## Prints information
